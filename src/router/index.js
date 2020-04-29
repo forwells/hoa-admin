@@ -309,24 +309,6 @@ export const asyncRoutes = [
       }
     ]
   },
-
-  {
-    path: '/zip',
-    component: Layout,
-    redirect: '/zip/download',
-    alwaysShow: true,
-    name: 'Zip',
-    meta: { title: 'zip', icon: 'zip' },
-    children: [
-      {
-        path: 'download',
-        component: () => import('@/views/zip/index'),
-        name: 'ExportZip',
-        meta: { title: 'exportZip' }
-      }
-    ]
-  },
-
   {
     path: '/pdf',
     component: Layout,
@@ -345,7 +327,6 @@ export const asyncRoutes = [
     component: () => import('@/views/pdf/download'),
     hidden: true
   },
-
   {
     path: '/theme',
     component: Layout,
@@ -358,20 +339,6 @@ export const asyncRoutes = [
       }
     ]
   },
-
-  {
-    path: '/clipboard',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/clipboard/index'),
-        name: 'ClipboardDemo',
-        meta: { title: 'clipboardDemo', icon: 'clipboard' }
-      }
-    ]
-  },
-
   {
     path: '/i18n',
     component: Layout,
@@ -390,7 +357,7 @@ export const asyncRoutes = [
     component: Layout,
     children: [
       {
-        path: 'https://github.com/PanJiaChen/vue-element-admin',
+        path: '',
         meta: { title: 'externalLink', icon: 'link' }
       }
     ]
