@@ -33,10 +33,14 @@ module.exports = {
     port: port,
     open: true,
     overlay: {
-      warnings: false,
+      warnings: true,
       errors: true
     },
-    before: require('./mock/mock-server.js')
+    proxy:{
+      '/v1': {
+        target: 'http://api.test'
+      }
+    }
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
