@@ -81,18 +81,6 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/documentation',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/documentation/index'),
-        name: 'Documentation',
-        meta: { title: 'documentation', icon: 'documentation', affix: true }
-      }
-    ]
-  },
-  {
     path: '/profile',
     component: Layout,
     redirect: '/profile/index',
@@ -151,20 +139,6 @@ export const asyncRoutes = [
           title: 'rolePermission',
           roles: ['admin']
         }
-      }
-    ]
-  },
-
-  {
-    path: '/icon',
-    component: Layout,
-    hidden:true,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/icons/index'),
-        name: 'Icons',
-        meta: { title: 'icons', icon: 'icon', noCache: true }
       }
     ]
   },
